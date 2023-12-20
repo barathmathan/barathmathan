@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+bool isPalindrome(const char *str) {
+    int len = strlen(str);
+    int start = 0;
+    int end = len - 1;
+    while (start < end) {
+        if (str[start] != str[end]) {
+            return false; // Not a palindrome
+        }
+        start++;
+        end--;
+    }
+
+    return true; // Palindrome
+}
+int main() {
+    char input[100]
+    printf("Enter a string: ");
+    fgets(input, sizeof(input), stdin);
+    if (input[strlen(input) - 1] == '\n') {
+        input[strlen(input) - 1] = '\0';
+    }
+    if (isPalindrome(input)) {
+        printf("%s is a palindrome.\n", input);
+    } else {
+        printf("%s is not a palindrome.\n", input);
+    }
+
+    return 0;
+}
